@@ -2,16 +2,11 @@
 function replaceName(){
     let nama = prompt("Halo, siapakah nama anda?", ""); //buat minta masukkan, user sebagai default
     document.getElementById("name").innerHTML = nama; //ganti dalem html nya dengan nama
-//console.log(nama);
 }
 
 let tombol = document.getElementById("tombol").addEventListener("click", function(){
     replaceName();
-}); //setiap di klik, maka panggil replace name
-
-// document.getElementById("name-input").addEventListener("onKeyup", function(nama){
-//     console.log(nama)
-// })
+}); 
 
 var slideIndex=1;
 var n;
@@ -39,16 +34,23 @@ setInterval(() => {
 }, 1000) //biar jalan setiap 1000 ms atau 1s
 
 function validateForm(){
-    const nama=document.forms["message-form"]["full-name"].value;
-    const birthDate = document.forms["message-form"]["birth-date"].value;
-    const gender = document.forms["message-form"]["gender"].value;
-    const messages =document.forms["message-form"]["message"].value;
+    const form = document.forms["message-form"];
+    const nama = form["full-name"].value.trim();
+    const birthDate = form["birth-date"].value.trim();
+    const gender = form["gender"].value.trim();
+    const messages = form["message"].value.trim();
 
     if(nama=='' || birthDate=='' || gender=='' || messages==''){
         document.getElementById('error-name').innerHTML="Tidak boleh kosong";
-        allert("Tidak boleh ada yang kosong");
+        alert("Tidak boleh ada yang kosong");
         return false;
     }
+
+    // console.log(nama);
+    // console.log(birthDate);
+    // console.log(gender);
+    // console.log(messages);
+
 
     // document.getElementById("name").innerHTML=nama;
     // document.getElementById("error-name").innerHTML="";//biar error nya ilang

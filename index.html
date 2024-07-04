@@ -17,9 +17,10 @@
             </div>
             <div class="menu">
             <nav>
-                <a href="#home">Home</a> <!--biar dipenct langsung scroll-->
-                <a href="#our-profile">Our Services</a>
-                <a href="#message-us">Message Us</a>
+                <a href="#home" style="border: solid;">Home</a> <!--biar dipenct langsung scroll-->
+                <a href="#visiMisi" style="border: solid;">Visi dan Misi</a>
+                <a href="#our-profile" style="border: solid;">Our Services</a>
+                <a href="#message-us" style="border: solid;">Message Us</a>
             </nav>
             </div>
         </header>
@@ -49,43 +50,21 @@
                 <div class="banner-container">
                     <!--<div class="company-pict"></div>-->
                     <img class="img-slideshow"
-                    src="https://cdn.pixabay.com/photo/2020/04/16/19/38/beautiful-landscape-5052125_640.jpg" />
+                    src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/06/2023/12/27/pngtree-5-cute-kittens-looking-at-the-camera-image_2677857-1037121086.jpg" />
 
                     <img class="img-slideshow"
-                    src="https://www.blibli.com/friends-backend/wp-content/uploads/2023/02/B100118-4-scaled.jpg" />
+                    src="https://thumb.tvonenews.com/thumbnail/2024/01/27/65b4b4e60e999-mau-shalat-tapi-ada-bulu-kucing-di-sajadah-najis-atau-tidak-begini-penjelasan-buya-yahya_1265_711.jpg" />
                 
                     <img class="img-slideshow"
-                    src="https://www.markdesign.net/images/blog/resize_755_2000/6542a-82.jpg" />
+                    src="https://image.popbela.com/content-images/post/20200814/d8a630f2f50c6670df3aecddf0adc584.png?width=1600&format=webp&w=1600" />
 
                     <button onclick="plusDivs(-1)" class="tombol-auto">Previous</button>
                     <button onclick="plusDivs(1)" class="tombol-auto">Next</button>
                 </div>
                 </article>
 
-                <!-- <script>
-                    var slideIndex=1;
-                    showDivs(slideIndex);
-
-                    function plusDivs(n){
-                        showDivs(slideIndex==n);
-                    }
-
-                    function showDivs(){
-                        var i;
-                        var imgList = document.getElementsByClassName("img-slideshow");
-                        if(n>imgList.length) slideIndex=1;
-                        if(n<1) slideIndex=imgList.length;
-
-                        for(i=0;i<imgList.length;i++){
-                            imgList[i].style.display="none";
-                        }
-
-                        imgList[slideIndex-1].style.display="block";
-                    }
-                </script> -->
-
-                <div class="visi-misi">
-                    <h1>Visi dan Misi</h1>
+                <div class="visi-misi" id="visiMisi">
+                    <h1 >Visi dan Misi</h1>
                     <h3>Misi</h3>
                     <ul style="list-style-type: disc;">
                         <li>Memberikan kucing sehat dan berkualitas</li>
@@ -108,7 +87,8 @@
         ini our profile content-->
         <section id="our-profile">
             <header>
-                <h1>Our Services</h1>
+                <h1 margin-block-start: 0.83em;
+                margin-block-end: 0.83em;>Our Services</h1>
             </header>
 
             <article class="profile-content" >
@@ -147,31 +127,32 @@
 
         <section id="message-us">
             <header>
-                <h1>Message Us</h1>
+                <h1 style="margin-block-start: 0.83em;
+                margin-block-end: 0.83em;">Message Us</h1>
             </header>
 
             <div class="message">
-            <form name="message-form" onsubmit="return validateForm()">
-                Nama : <input required placeholder="Nama" type="text" name="full name" />
-                <p id="error-name"></p>
+            <form name="message-form">
+                Nama : <input required placeholder="Nama" type="text" name="full name" id="full-name">
+                <!-- <p id="error-name"></p> -->
                 <br />
 
                 Tanggal lahir:
-                <input required type="date" name="birth-date"/>
+                <input required type="date" name="birth-date"id="birth-date">
                 <br />
 
                 Jenis Kelamin:
-                <input type="radio" id="male" name="gender" value="male" />
+                <input required type="radio" id="male" name="gender" value="male" />
                 <label for="male">Laki=laki</label>
-                <input type="radio" id="female" name="gender" value="female" />
+                <input required type="radio" id="female" name="gender" value="female" />
                 <label for="female">Perempuan</label>
                 <br />
 
                 Pesan:
-                <textarea placeholder="Pesan" name="messages"></textarea>
+                <textarea required placeholder="Pesan" name="messages" id="message"></textarea>
                 <br />
 
-                <button id="submit" type="submit">Submit</button>
+                <button id="submit" type="submit" onclick="return validateForm()">Submit</button>
             </form>
 
             <div class="validation">
@@ -185,4 +166,10 @@
         </section>
        <script src="js/script.js"></script>
     </body>
+
+    <footer>
+        <div class="id-name">
+            <h4>Create by Nadila</h4>
+        </div>
+    </footer>
 </html>
